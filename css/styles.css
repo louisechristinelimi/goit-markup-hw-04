@@ -6,8 +6,8 @@
   --slate: #434455;
   --cornflower: #e7e9fc;
   --cloud: #f4f4fd;
-  --grey: #2e2f42b3;
   --light-slate: #8e8f99;
+  --green: #31d0aa;
 }
 
 h1,
@@ -137,8 +137,14 @@ body {
 }
 
 .hero {
-  background-image: url(../images/hero-bg.jpg),
-    linear-gradient(rgba(46, 47, 66, 0.7)), (rgba(46, 47, 66, 0.7));
+  background-image: linear-gradient(
+      to right,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   padding: 188px 0;
   flex-shrink: 0;
@@ -193,7 +199,9 @@ body {
 .about-svg {
   width: 264px;
   height: 112px;
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
   background: var(--cloud, #f4f4fd);
   margin-bottom: 8px;
@@ -202,8 +210,6 @@ body {
 .about-svg_box {
   width: 64px;
   height: 64px;
-  flex-shrink: 0;
-  margin: 24px 100px;
 }
 
 .about-title {
@@ -291,7 +297,7 @@ body {
   background-color: var(--iris, #4d5ae5);
   border-radius: 50px;
   cursor: pointer;
-  fill: var(---cloud, #f4f4fd);
+  color: var(---cloud, #f4f4fd);
 }
 
 .team-social-link:hover,
@@ -302,18 +308,7 @@ body {
 .team-social-link_box {
   width: 16px;
   height: 16px;
-  flex-shrink: 0;
-}
-
-.customer-title {
-  color: var(--navyblue, #2e2f42);
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 0.72px;
-  text-transform: capitalize;
-  margin-bottom: 72px;
+  fill: currentColor;
 }
 
 .customer {
@@ -344,8 +339,6 @@ body {
 .customer-link_box {
   width: 104px;
   height: 56px;
-  flex-shrink: 0;
-  gap: 24px;
   fill: currentColor;
 }
 
@@ -376,6 +369,7 @@ body {
   border: 1px solid var(--cornflower, #e7e9fc);
 }
 
+.active-filter,
 .filter-button:hover,
 .filter-button:focus {
   color: var(--cloud, #f4f4fd);
@@ -389,6 +383,20 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
+}
+
+.portfolio-link {
+  text-decoration: none;
+  display: block;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  cursor: pointer;
+  border: var(--cloud, #f4f4fd);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-meta {
@@ -436,7 +444,7 @@ body {
 .social-media-container {
   display: flex;
   flex-direction: column;
-  margin-left: 269px;
+  margin-left: 120px;
 }
 
 .social-media {
@@ -460,16 +468,16 @@ body {
   background-color: var(--iris, #4d5ae5);
   border-radius: 50px;
   cursor: pointer;
-  fill: var(---cloud, #f4f4fd);
+  color: var(---cloud, #f4f4fd);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
-  background-color: var(--ocean, #404bbf);
+  background-color: var(--green, #31d0aa);
 }
 
 .footer-social-link_box {
   width: 24px;
   height: 24px;
-  flex-shrink: 0;
+  fill: currentColor;
 }
